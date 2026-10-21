@@ -1,0 +1,13 @@
+node_modules/
+.next/
+.next-dev/
+out/
+build/
+coverage/
+.env*
+!.env.example
+!.env.local.example
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+.vercel

@@ -1,0 +1,315 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply m-0 bg-[#f8faf8] font-sans text-sm text-[#22352f] antialiased;
+  }
+
+  button,
+  input {
+    @apply font-sans;
+  }
+}
+
+body {
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+body[data-theme="light"] {
+  background: #f3f6f1;
+  color: #26382f;
+  color-scheme: light;
+}
+
+body[data-theme="light"] :where(main, aside, header, section, article, form, [class*="bg-white"]) {
+  background-color: #fffefa;
+}
+
+body[data-theme="light"] :where([class*="bg-white/"]) {
+  background-color: rgb(255 254 250 / 94%);
+}
+
+body[data-theme="light"] :where(
+  [class*="bg-[#f8faf8]"],
+  [class*="bg-[#f5f8f5]"],
+  [class*="bg-[#fbfcfb]"],
+  [class*="bg-[#f6f8f6]"]
+) {
+  background-color: #f3f6f1;
+}
+
+body[data-theme="light"] :where(
+  [class*="bg-[#eef5f0]"],
+  [class*="bg-[#edf5ef]"],
+  [class*="bg-[#f2f5f2]"],
+  [class*="bg-[#f1f6f2]"],
+  [class*="bg-[#edf6ef]"]
+) {
+  background-color: #eaf2e9;
+}
+
+body[data-theme="light"] :where(
+  [class*="text-[#22352f]"],
+  [class*="text-[#263c32]"],
+  [class*="text-[#31463b]"],
+  [class*="text-[#33493d]"],
+  [class*="text-[#40564c]"],
+  [class*="text-[#42574b]"],
+  [class*="text-[#45574d]"]
+) {
+  color: #26382f;
+}
+
+body[data-theme="light"] :where(
+  [class*="text-[#7d8a83]"],
+  [class*="text-[#7e8b83]"],
+  [class*="text-[#829187]"],
+  [class*="text-[#82988b]"],
+  [class*="text-[#87928b]"],
+  [class*="text-[#87938c]"],
+  [class*="text-[#89958e]"],
+  [class*="text-[#91a097]"],
+  [class*="text-[#98a69d]"],
+  [class*="text-[#99a49d]"],
+  [class*="text-[#9aa49d]"],
+  [class*="text-[#9aa59e]"],
+  [class*="text-[#9ba69f]"],
+  [class*="text-[#a1aaa4]"],
+  [class*="text-[#a4ada7]"],
+  [class*="text-[#a5afa8]"],
+  [class*="text-[#a6b0a9]"],
+  [class*="text-[#adb6b0]"]
+) {
+  color: #748278;
+}
+
+body[data-theme="light"] :where(
+  [class*="text-[#326b57]"],
+  [class*="text-[#356a52]"],
+  [class*="text-[#3a6351]"],
+  [class*="text-[#416c57]"],
+  [class*="text-[#4d8062]"],
+  [class*="text-[#4e7e62]"],
+  [class*="text-[#55836b]"],
+  [class*="text-[#579271]"],
+  [class*="text-[#5b856e]"],
+  [class*="text-[#5f9471]"],
+  [class*="text-[#688777]"],
+  [class*="text-[#70937c]"],
+  [class*="text-[#71947f]"],
+  [class*="text-[#75a886]"]
+) {
+  color: #326b52;
+}
+
+body[data-theme="light"] :where(
+  [class*="border-[#e9eeea]"],
+  [class*="border-[#e2e9e3]"],
+  [class*="border-[#eff2ef]"],
+  [class*="border-[#f0f2f0]"],
+  [class*="border-[#f1f3f1]"],
+  [class*="border-[#e8eee9]"],
+  [class*="border-[#dce8de]"]
+) {
+  border-color: #e2e9e1;
+}
+
+body[data-theme="light"] :where(input, select, textarea) {
+  background-color: #fffefa;
+  color: #26382f;
+  border-color: #dce5dc;
+  color-scheme: light;
+}
+
+body[data-theme="light"] :where(input::placeholder, textarea::placeholder) {
+  color: #9aa79c;
+}
+
+body[data-theme="light"] :where([role="alert"]) {
+  background-color: #fff3ef;
+  border-color: #f0d8d0;
+  color: #a24838;
+}
+
+body[data-theme="light"] :where([role="status"]) {
+  background-color: #edf6ef;
+  border-color: #d9ebdc;
+  color: #356a52;
+}
+
+body[data-theme="light"] :where(button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible) {
+  outline: 2px solid #55836b;
+  outline-offset: 2px;
+}
+
+body[data-theme="dark"] {
+  background: #111714;
+  color: #e3e9e4;
+  color-scheme: dark;
+}
+
+body[data-theme="dark"] :where(main, aside, header, section, article, form, [class*="bg-white"]) {
+  background-color: #1c2521;
+}
+
+body[data-theme="dark"] :where([class*="bg-white/"]) {
+  background-color: rgb(28 37 33 / 92%);
+}
+
+body[data-theme="dark"] :where(
+  [class*="bg-[#f8faf8]"],
+  [class*="bg-[#f5f8f5]"],
+  [class*="bg-[#fbfcfb]"],
+  [class*="bg-[#f6f8f6]"],
+  [class*="bg-[#fff3f0]"]
+) {
+  background-color: #111714;
+}
+
+body[data-theme="dark"] :where(
+  [class*="bg-[#eef5f0]"],
+  [class*="bg-[#edf5ef]"],
+  [class*="bg-[#f2f5f2]"],
+  [class*="bg-[#f1f6f2]"],
+  [class*="bg-[#edf6ef]"]
+) {
+  background-color: #24342b;
+}
+
+body[data-theme="dark"] :where(
+  [class*="bg-[#e7f0e8]"],
+  [class*="bg-[#e4f0e7]"],
+  [class*="bg-[#e9eafb]"],
+  [class*="bg-[#f4efdc]"],
+  [class*="bg-[#fae9e2]"],
+  [class*="bg-[#f9e9e2]"],
+  [class*="bg-[#f2e4d9]"]
+) {
+  background-color: #303832;
+}
+
+body[data-theme="dark"] :where([class*="bg-[#326b57]"]) {
+  background-color: #39765b;
+}
+
+body[data-theme="dark"] :where(
+  [class*="text-[#22352f]"],
+  [class*="text-[#263c32]"],
+  [class*="text-[#31463b]"],
+  [class*="text-[#33493d]"],
+  [class*="text-[#40564c]"],
+  [class*="text-[#42574b]"],
+  [class*="text-[#45574d]"]
+) {
+  color: #e3e9e4;
+}
+
+body[data-theme="dark"] :where(
+  [class*="text-[#7d8a83]"],
+  [class*="text-[#7e8b83]"],
+  [class*="text-[#829187]"],
+  [class*="text-[#82988b]"],
+  [class*="text-[#87928b]"],
+  [class*="text-[#87938c]"],
+  [class*="text-[#89958e]"],
+  [class*="text-[#91a097]"],
+  [class*="text-[#98a69d]"],
+  [class*="text-[#99a49d]"],
+  [class*="text-[#9aa49d]"],
+  [class*="text-[#9aa59e]"],
+  [class*="text-[#9ba69f]"],
+  [class*="text-[#a1aaa4]"],
+  [class*="text-[#a4ada7]"],
+  [class*="text-[#a5afa8]"],
+  [class*="text-[#a6b0a9]"],
+  [class*="text-[#adb6b0]"]
+) {
+  color: #9aaba0;
+}
+
+body[data-theme="dark"] :where(
+  [class*="text-[#326b57]"],
+  [class*="text-[#356a52]"],
+  [class*="text-[#3a6351]"],
+  [class*="text-[#416c57]"],
+  [class*="text-[#4d8062]"],
+  [class*="text-[#4e7e62]"],
+  [class*="text-[#55836b]"],
+  [class*="text-[#579271]"],
+  [class*="text-[#5b856e]"],
+  [class*="text-[#5f9471]"],
+  [class*="text-[#688777]"],
+  [class*="text-[#70937c]"],
+  [class*="text-[#71947f]"],
+  [class*="text-[#75a886]"]
+) {
+  color: #8fc69d;
+}
+
+body[data-theme="dark"] :where(
+  [class*="text-[#a24838]"],
+  [class*="text-[#af765e]"],
+  [class*="text-[#b27668]"],
+  [class*="text-[#b64d3e]"],
+  [class*="text-[#b8795b]"],
+  [class*="text-[#d78372]"]
+) {
+  color: #f0a99a;
+}
+
+body[data-theme="dark"] :where(
+  [class*="text-[#956a51]"],
+  [class*="text-[#9c8c4d]"],
+  [class*="text-[#d6a184]"],
+  [class*="text-[#d99779]"]
+) {
+  color: #e4b08d;
+}
+
+body[data-theme="dark"] :where(
+  [class*="border-[#e9eeea]"],
+  [class*="border-[#e2e9e3]"],
+  [class*="border-[#eff2ef]"],
+  [class*="border-[#f0f2f0]"],
+  [class*="border-[#f1f3f1]"],
+  [class*="border-[#e8eee9]"],
+  [class*="border-[#dce8de]"]
+) {
+  border-color: #35433b;
+}
+
+body[data-theme="dark"] :where(input, select, textarea) {
+  background-color: #141c18;
+  color: #e3e9e4;
+  border-color: #3b4b41;
+  color-scheme: dark;
+}
+
+body[data-theme="dark"] :where(input::placeholder, textarea::placeholder) {
+  color: #83958a;
+}
+
+body[data-theme="dark"] :where([role="alert"]) {
+  background-color: #382724;
+  border-color: #624139;
+  color: #f0b2a4;
+}
+
+body[data-theme="dark"] :where([role="status"]) {
+  background-color: #23362a;
+  border-color: #385640;
+  color: #b8dfc0;
+}
+
+body[data-theme="dark"] :where(button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible) {
+  outline: 2px solid #78b98b;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    transition: none;
+  }
+}
